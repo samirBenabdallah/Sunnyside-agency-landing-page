@@ -1,0 +1,111 @@
+@media screen and (max-width: 750px) {
+  nav {
+    ul {
+      position: absolute;
+      width: 335px;
+      height: 0px;
+      overflow: hidden;
+      transition: 0.5s;
+      bottom: -5px;
+      left: 50%;
+      transform: translate(-50%, 100%);
+      background-color: var(--White);
+      flex-direction: column;
+      border-radius: 5px;
+      justify-content: space-between;
+      &.hide {
+        height: 200px;
+        padding: 10px;
+        overflow: visible;
+      }
+      &::before {
+        content: "";
+        border: 20px solid var(--White);
+        border-right-color: transparent;
+        border-top-color: transparent;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translate(50%, -50%) rotate(45deg);
+      }
+      li {
+        font-size: 1.5rem;
+        margin: 0;
+        color: var(--Dark-grayish-blue);
+        &:last-child {
+          background-color: var(--Yellow);
+          color: black;
+          padding: 10px 15px;
+        }
+      }
+    }
+    button {
+      display: block;
+      margin-left: auto;
+      width: max-content;
+    }
+    img {
+      height: 40%;
+    }
+  }
+  header {
+    background-image: url("../images/mobile/image-header.jpg");
+    background-size: 100% 100%;
+  }
+  .section-1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 50vh);
+    .transform {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    .graphic-desin {
+      background-image: url("../images/mobile/image-graphic-design.jpg");
+    }
+    .text-1 {
+      text-align: center;
+      font-size: 18px;
+      p {
+        margin-block: 30px;
+      }
+      button {
+        margin-inline: auto;
+      }
+    }
+    .text-2 {
+      padding-inline: 10%;
+    }
+  }
+  .section-2 {
+    margin-top: 60vh;
+    > p {
+      font-size: 1rem;
+      text-align: center;
+    }
+    > div {
+      width: 100%;
+      height: 100%;
+      display: block;
+
+      .card {
+        width: 100%;
+        height: 250px;
+        > p {
+          padding-inline: 50px;
+        }
+        &:nth-child(2) {
+          margin-block: 30px;
+        }
+      }
+    }
+  }
+  .galerie {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+    height: 50vh;
+    > div {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
